@@ -1,114 +1,114 @@
-# ToxiTracAI  
+# ToxiTracAI 
 
-ToxiTracAI ist ein Schulprojekt zur Entwicklung eines Machine-Learning-Systems zur Erkennung von Alkoholkonsum anhand von Herzfrequenzdaten. Das Projekt umfasst die Datenaufbereitung, Modelltraining und Anwendung durch ein neuronales Netzwerk.
+ToxiTracAI is a school project aimed at developing a machine-learning system for detecting alcohol consumption based on heart rate data. The project encompasses data preparation, model training, and application through a neural network.
 
-## Inhaltsverzeichnis  
+## Table of Contents 
 
-- [Überblick](#überblick)  
-- [Projektstruktur](#projektstruktur)  
-- [Installation](#installation)  
-- [Anwendung](#anwendung)  
-- [Hinweise zur Daten- und Modellorganisation](#hinweise-zur-daten--und-modellorganisation)  
-- [Weiterentwicklungen](#weiterentwicklungen)  
-
----
-
-## Überblick  
-
-In diesem Projekt untersuchen wir Herzfrequenzdaten von alkoholisierten und nicht alkoholisierten Personen und erstellen ein Machine-Learning-Modell zur Erkennung von Herzfrequenzveränderungen.  
-### Features:  
-- Datenaufbereitung: Konsolidierung und Verarbeitung von Rohdaten.  
-- Modelltraining: Neuronales Netzwerk für Klassifizierung normaler und abnormaler Zustände.  
-- Einfache Anwendung via `main.py`.  
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Notes on Data and Model Organization](#notes-on-data-and-model-organization)
+- [Future Developments](#future-developments)
 
 ---
 
-## Projektstruktur  
+## Overview 
 
-Hier ist ein Überblick über die Struktur des Projekts:  
+In this project, we analyze heart rate data from intoxicated and non-intoxicated individuals to create a machine-learning model for detecting changes in heart rate.  
+### Features: 
+- Data Preparation: Consolidation and processing of raw data. 
+- Model Training: Neural network for classifying normal and abnormal states. 
+- Easy application via `main.py`.
+
+---
+
+## Project Structure 
+
+Here is an overview of the project structure: 
 
 ```
-ToxiTracAI/  
-├── datasets/                                  # Roh- und verarbeitete Datensätze  
-├── model-training/                            # Notebooks für Modelltraining  
-├── models/                                    # Modell- und Scaler-Dateien  
-│   ├── heart_nn_normalrate_model2.keras       # Trainiertes Modell  
-│   └── scaler_nn_model2.joblib                # Scaler für Daten-Normalisierung  
-├── wavelet-transform/                         # Experimente zur Datenanalyse  
-├── .gitignore                                 # Ignorierte Dateien und Ordner  
-├── config.py                                  # Zentrale Konfigurationsdatei für Pfade  
-├── main.py                                    # Haupt-Skript zur Anwendung  
-├── toxitracai.py                              # Hauptklasse für die Analyse  
-├── README.md                                  # Projekt-Beschreibung  
-└── requirements.txt                           # Abhängigkeiten für das Projekt  
+ToxiTracAI/
+├── datasets/                # Raw and processed datasets 
+├── model-training/          # Notebooks for model training 
+├── models/                  # Model and scaler files 
+│   ├── heart_nn_normalrate_model2.keras  # Trained model 
+│   └── scaler_nn_model2.joblib            # Scaler for data normalization 
+├── wavelet-transform/       # Experiments for data analysis 
+├── .gitignore               # Ignored files and folders 
+├── config.py                # Central configuration file for paths 
+├── main.py                  # Main script for application 
+├── toxitracai.py            # Main class for analysis 
+├── README.md                # Project description 
+└── requirements.txt         # Dependencies for the project 
 ```
 
 ---
 
-## Installation  
+## Installation 
 
-1. **Repository klonen:**  
+1. **Clone the Repository:**  
    ```bash
    git clone https://github.com/prenyx/ToxiTracAI.git
    cd ToxiTracAI
    ```
 
-2. **Virtuelle Umgebung erstellen und aktivieren:**  
+2. **Create and Activate a Virtual Environment:**  
    ```bash
    python -m venv venv
-   source venv/bin/activate   # Für Mac/Linux
-   venv\Scripts\activate      # Für Windows
+   source venv/bin/activate  # For Mac/Linux
+   venv\Scripts\activate      # For Windows
    ```
 
-3. **Erforderliche Pakete installieren:**  
+3. **Install Required Packages:**  
    ```bash
    pip install -r requirements.txt
    ```
 
 ---
 
-## Anwendung  
+## Usage 
 
-1. **Datenaufbereitung:**  
-   Im Notebook `data_preparation.ipynb` wurden die Herzfrequenzdaten von alkoholisierten und nicht alkoholisierten Personen zusammengeführt. Diese Daten sind jedoch noch nicht vollständig vorbereitet; es werden nur die **normalen BPM-Daten** verwendet.  
+1. **Data Preparation:**  
+   In the notebook `data_preparation.ipynb`, the heart rate data from intoxicated and non-intoxicated individuals has been consolidated. However, this data is not yet fully prepared; only the **normal BPM data** is used.
 
-2. **Modellanwendung:**  
-   Um das Programm auszuführen, starten Sie einfach die Datei `main.py`. Diese initialisiert die **ToxitracAI-Klasse**, die das vorbereitete Modell lädt und Vorhersagen über die eingegebenen BPM-Daten trifft.  
+2. **Model Application:**  
+   To run the program, simply execute the `main.py` file. This initializes the **ToxitracAI class**, which loads the prepared model and makes predictions based on the input BPM data.  
    ```bash
    python main.py
    ```
 
-3. **Beispielausgabe:**  
-   - Geben Sie minimale und maximale BPM-Werte sowie die aktuelle Bedingung (z. B. „resting“) ein.  
-   - Das Modell gibt zurück, ob ein Zustand „active“ oder „normal“ erkannt wird.  
+3. **Example Output:**  
+   - Input the minimum and maximum BPM values as well as the current condition (e.g., "resting").  
+   - The model will return whether the state is recognized as "active" or "normal."
 
 ---
 
-## Hinweise zur Daten- und Modellorganisation  
+## Notes on Data and Model Organization 
 
-1. **Modelldateien:**  
-   Die Modelldateien befinden sich im Ordner `models/`, darunter das trainierte Modell (`heart_nn_normalrate_model2.keras`) und der Scaler (`scaler_nn_model2.joblib`).  
-   Alle Modellpfade werden über die Datei `config.py` dynamisch konfiguriert, sodass sie unabhängig vom jeweiligen System genutzt werden können.  
+1. **Model Files:**  
+   Model files are located in the `models/` folder, including the trained model (`heart_nn_normalrate_model2.keras`) and the scaler (`scaler_nn_model2.joblib`).  
+   All model paths are dynamically configured through the `config.py` file, allowing them to be used independently of the system.
 
-2. **Dataset-Ordner:**  
-   Der Ordner `datasets/` enthält einige Beispiel-Datensätze, die zur Evaluierung des Modells verwendet werden können.  
+2. **Dataset Folder:**  
+   The `datasets/` folder contains some example datasets that can be used for evaluating the model.
 
-3. **Wavelet-Daten:**  
-   Im Ordner `wavelet-transform/` befinden sich experimentelle EKG-Daten für **normale BPM-Werte**, die in zukünftigen Iterationen des Projekts erweitert werden könnten.
+3. **Wavelet Data:**  
+   The `wavelet-transform/` folder contains experimental EKG data for **normal BPM values**, which could be expanded in future iterations of the project.
 
-4. **Model-Training:**  
-   Der Ordner `model-training/` enthält alle relevanten Codes und Notebooks für das Training des neuronalen Netzwerks, einschließlich Datenaufteilung, Feature-Scaling und Modelloptimierung.
-
----
-
-## Weiterentwicklungen  
-
-- Integration der alkoholisierten Daten ins Modelltraining.  
-- Validierung des Modells anhand eines größeren und diversifizierten Datensatzes.  
-- Optimierung des neuronalen Netzwerks zur Verbesserung der Genauigkeit.  
+4. **Model Training:**  
+   The `model-training/` folder contains all relevant codes and notebooks for training the neural network, including data splitting, feature scaling, and model optimization.
 
 ---
 
-### Viel Erfolg bei der Nutzung von ToxiTracAI! 🎉  
+## Future Developments 
+
+- Integration of intoxicated data into model training. 
+- Validation of the model using a larger and more diverse dataset. 
+- Optimization of the neural network to improve accuracy.
 
 ---
+
+# Best of luck using ToxiTracAI! 🎉 
+
+--- 
