@@ -10,7 +10,3 @@ DATASETS_DIR = os.path.join(PROJECT_ROOT, "datasets")
 # Define specific model paths
 KERAS_MODEL_PATH = os.path.join(MODELS_DIR, "heart_nn_normalrate_model2.keras")
 SCALER_MODEL_PATH = os.path.join(MODELS_DIR, "scaler_nn_model2.joblib")
-
-
-# KERAS_FILE_PATH = 'C:/Users/sthee/SynologyDrive/PycharmProjects/ToxitracAI/models/heart_nn_normalrate_model2.keras'
-# SCALER_FILE_PATH = 'C:/Users/sthee/SynologyDrive/PycharmProjects/ToxitracAI/models/scaler_nn_model2.joblib'
