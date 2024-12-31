@@ -81,10 +81,15 @@ docs/_build/
 .pybuilder/
 target/
 
-# Jupyter Notebook
+###### Jupyter Notebook ######
 .ipynb_checkpoints
 wavelet-transform/wavelet_norm_bpm100.ipynb
 wavelet-transform/wavelet_norm_bpm50.ipynb
+model_training.ipynb
+training_sets.ipynb
+
+###### Trained ML Models #####
+models/heart_nn_normalrate_model.h5
 
 # IPython
 profile_default/
