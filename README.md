@@ -87,7 +87,7 @@ ToxiTracAI/
 ## Hinweise zur Daten- und Modellorganisation  
 
 1. **Modelldateien:**  
-   Die Modelldateien befinden sich im Ordner `models/`, darunter das trainierte Modell (`intoxicated_model.h5`) und der Scaler (`scaler.pkl`).  
+   Die Modelldateien befinden sich im Ordner `models/`, darunter das trainierte Modell (`heart_nn_normalrate_model2.keras`) und der Scaler (`scaler_nn_model2.joblib`).  
    Alle Modellpfade werden über die Datei `config.py` dynamisch konfiguriert, sodass sie unabhängig vom jeweiligen System genutzt werden können.  
 
 2. **Dataset-Ordner:**  
