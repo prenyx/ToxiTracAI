@@ -1,10 +1,7 @@
 from joblib import load
 import pandas as pd
 import tensorflow as tf
-import os
-
-KERAS_FILE_PATH = 'C:/Users/sthee/SynologyDrive/PycharmProjects/ToxitracAI/models/heart_nn_normalrate_model2.keras'
-SCALER_FILE_PATH = 'C:/Users/sthee/SynologyDrive/PycharmProjects/ToxitracAI/models/scaler_nn_model2.joblib'
+from config import KERAS_MODEL_PATH, SCALER_MODEL_PATH
 
 
 class ToxitracAI:
@@ -16,8 +13,8 @@ class ToxitracAI:
         self._condition = condition
 
         # Load trained model
-        self.model = tf.keras.models.load_model(KERAS_FILE_PATH)
-        self.scaler = load(SCALER_FILE_PATH)
+        self.model = tf.keras.models.load_model(KERAS_MODEL_PATH)
+        self.scaler = load(SCALER_MODEL_PATH)
 
     # @tf.function(reduce_retracing=True)
     def predict_condition(self):

@@ -1,12 +1,8 @@
 from toxitracai import ToxitracAI
-import os
 
 
 # os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"  # Suppress TensorFlow messages
 # os.environ["TF_ENABLE_ONEDNN_OPTS"] = "1"  # Enable optimizations, including AVX2
-
-
-NORM_DATA_FILE_PATH = 'C:/Users/sthee/SynologyDrive/PycharmProjects/ToxitracAI/bpm_norm_rates200.csv'
 
 
 def main():
