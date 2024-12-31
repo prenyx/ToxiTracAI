@@ -29,18 +29,18 @@ Here is an overview of the project structure:
 
 ```
 ToxiTracAI/
-├── datasets/                # Raw and processed datasets 
-├── model-training/          # Notebooks for model training 
-├── models/                  # Model and scaler files 
-│   ├── heart_nn_normalrate_model2.keras  # Trained model 
+├── datasets/                              # Raw and processed datasets 
+├── model-training/                        # Notebooks for model training 
+├── models/                                # Model and scaler files 
+│   ├── heart_nn_normalrate_model2.keras   # Trained model 
 │   └── scaler_nn_model2.joblib            # Scaler for data normalization 
-├── wavelet-transform/       # Experiments for data analysis 
-├── .gitignore               # Ignored files and folders 
-├── config.py                # Central configuration file for paths 
-├── main.py                  # Main script for application 
-├── toxitracai.py            # Main class for analysis 
-├── README.md                # Project description 
-└── requirements.txt         # Dependencies for the project 
+├── wavelet-transform/                     # Experiments for data analysis 
+├── .gitignore                             # Ignored files and folders 
+├── config.py                              # Central configuration file for paths 
+├── main.py                                # Main script for application 
+├── toxitracai.py                          # Main class for analysis 
+├── README.md                              # Project description 
+└── requirements.txt                       # Dependencies for the project 
 ```
 
 ---
