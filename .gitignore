@@ -26,6 +26,12 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# datasets
+datasets/bpm_norm_rates.csv
+datasets/bpm_norm_rates100.csv
+
+
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -77,6 +83,8 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+wavelet-transform/wavelet_norm_bpm100.ipynb
+wavelet-transform/wavelet_norm_bpm50.ipynb
 
 # IPython
 profile_default/
